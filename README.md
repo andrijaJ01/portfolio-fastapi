@@ -36,7 +36,7 @@ $ uvicorn app.main:app --reload --port 8080 --host 0.0.0.0
 
 Visit [http://0.0.0.0:8080/](http://0.0.0.0:8080/).
 
-![Starting](./images/image-1.png)
+![Starting](./images/image-2.png)
 
 ## Features
 
