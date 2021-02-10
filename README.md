@@ -1,13 +1,9 @@
-# Fastapi Web Starter
 
-Please read the Medium article at [https://shinichiokada.medium.com/](https://shinichiokada.medium.com/).
-
-[Please sign up for more free resources.](https://mailchi.mp/ae9891ba897a/codewithshin)
 
 ## Overview
 
 A static simple website ready to deploy.
-This repo includes all the file and it is ready to deploy to Heroku.
+This repo includes all the files and it is ready to deploy to Heroku.
 
 - .env
 - .gitignore
@@ -26,27 +22,28 @@ See requirements.txt.
 ## Installation & Usage
 
 ```bash
-$ git clone git@github.com:shinokada/fastapi-web-starter.git
+$ git clone github.com/andrijaj01/portfolio-fastapi.git
 # Or using downloaded zip file 
-$ unzip fastapi-web-starter.zip
+$ unzip portfolio-website.zip
 
 # change the directory
-$ cd fastapi-web-starter
+$ cd portfolio-website
 # install packages
 $ pip install -r requirements.txt
 # start the server
-$ uvicorn app.main:app --reload --port 8080
+$ uvicorn app.main:app --reload --port 8080 --host 0.0.0.0
 ```
 
-Visit [http://127.0.0.1:8080/](http://127.0.0.1:8080/).
+Visit [http://0.0.0.0:8080/](http://0.0.0.0:8080/).
 
 ![Starting](./images/image-1.png)
 
 ## Features
 
 - Menu
-- Unsplash
+- Gallery
 - Accordion
+- Portfolio
 - Markdown pages
 
 ## Test
@@ -55,20 +52,18 @@ All tests are under `tests` directory.
 
 ```bash
 # Change the directory
-$ cd fastapi-web-starter
+$ cd portfolio-fastapi
 # Run tests
 $ pytest -v
 ```
 
-## Author
 
-[twitter](https://twitter.com/shinokada)
 
 ## Licence
 
 【MIT License】
 
-Copyright 2021 Shinichi Okada
+Copyright 2021 Andrija Jovanovic
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
