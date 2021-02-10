@@ -113,7 +113,7 @@ a:focus {
 }
 
 #sidebar ul p {
-    color: #fff;
+    color: rgb(255, 255, 255);
     padding: 10px;
 }
 
@@ -124,7 +124,7 @@ a:focus {
 }
 
 #sidebar ul li a:hover {
-    color: #f1f1f1;
+    color: #fff;
     background: rgb(0, 0, 0);
 }
 
