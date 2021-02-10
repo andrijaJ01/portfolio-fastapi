@@ -23,7 +23,7 @@ a:focus {
 
 .navbar {
     padding: 15px 10px 13px 10px;
-    background: #fff;
+    background: rgb(218, 217, 217);
     border: none;
     border-radius: 0;
     /*margin-bottom: 40px; */
@@ -48,7 +48,7 @@ a:focus {
 ----------------------------------------------------- */
 
 #sidebar {
-    width: 400px;
+    width: 350px;
     position: fixed;
     top: 0;
     left: -400px;
@@ -187,4 +187,3 @@ a.article:hover {
     top: 0;
     right: 0;
 }
-
