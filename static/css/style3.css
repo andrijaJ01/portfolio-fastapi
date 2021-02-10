@@ -48,11 +48,11 @@ a:focus {
 ----------------------------------------------------- */
 
 #sidebar {
-    max-width: 350px;
+    max-width: 250px;
     
     position: fixed;
     top: 0;
-    left: -350px;
+    left: -250px;
     height: 100vh;
     z-index: 999;
     background: #646464;
