@@ -8,44 +8,113 @@
 
 {% block page_content %}
 {% include 'include/sidebar.html' %}
-<style>
+<!--<style>
 .carousel-item {
   height: calc(100vh - 68px);
   min-height: 350px;
   background: no-repeat center center scroll;
-  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  -webkit-background-size: cover;
   background-size: cover;
   width:100vW;
 
 }
 .carousel-item p{color:white}
+@media (max-width:600px) {
+  .carousel-item {
 
+margin-bottom:-10px
+    bottom: 60px;}
+
+}
+</style> -->
+
+<style>
+  .top-content .carousel-item {
+      height: calc(100vh - 68px);
+      min-height: 400px;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+
+  .top-content .carousel-item-1 {
+      background-image: url(../static/images/img1.jpg);
+      width:100vW;
+  }
+
+  .top-content .carousel-item-2 {
+    background-image: url(../static/images/img2.jpg);
+    width:100vW;
+  }
+
+  .top-content .carousel-item-3 {
+    background-image: url(../static/images/img3-edited.jpg);
+    width:100vW;
+  }
+.top-content p{
+  color:yellow;
+}
+
+@media (max-width: 767px) {
+
+.top-content{
+  height:calc(100vh - 67px)
+}
+    h1, h2 {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .top-content .carousel-caption {
+        top: 65 %;
+    }
+
+    .top-content .carousel-indicators {
+        display: none;
+    }
+
+}
+
+media (max-width: 575px) {
+
+    .top-content .carousel-caption {
+        bottom: 10px;
+        padding-bottom: 20px;
+    }
+
+    .top-content .carousel-caption-description {
+        display: none;
+    }
+
+    .top-content h1,
+    .top-content h2,
+    .top-content h3 {
+        font-size: 18px;
+    }
+
+}
 </style>
-<header>
+<!--<header>
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-      <!-- Slide One - Set the background image for this slide in the line below -->
+       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+     </ol>
+      <div class="carousel-inner" role="listbox">
       <div class="carousel-item active" style="background-image: url({{url_for('static',path='images/img3-edited.jpg')}})">
         <div class="carousel-caption  d-md-block">
           <h2 class="display-4">Andrija Jovanovic</h2>
           <p class="lead">Python Developer.</p>
         </div>
       </div>
-      <!-- Slide Two - Set the background image for this slide in the line below -->
       <div class="carousel-item " style="background-image: url({{url_for('static',path='images/img2.jpg')}})">
         <div class="carousel-caption  d-md-block">
           <h2 class="display-4">Some of...</h2>
           <p class="lead">some of my projects include...</p>
         </div>
       </div>
-      <!-- Slide Three - Set the background image for this slide in the line below -->
       <div class="carousel-item " style="background-image: url({{url_for('static',path='images/img1.jpg')}})">
         <div class="carousel-caption  d-md-block">
           <h2 class="display-4">...my projects</h2>
@@ -62,8 +131,57 @@
           <span class="sr-only">Next</span>
         </a>
   </div>
-</header>
+</header>-->
+<!-- Top content -->
+<div class="top-content">
+    <!-- Carousel -->
+    <div id="carousel-example" class="carousel slide" data-ride="carousel">
 
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example" data-slide-to="1"></li>
+            <li data-target="#carousel-example" data-slide-to="2"></li>
+        </ol>
+
+        <div class="carousel-inner">
+            <div class="carousel-item carousel-item-1 active">
+                <div class="carousel-caption">
+                    <h1>Andrija Jovanovic</h1>
+                    <div class="carousel-caption-description">
+                        <p>Python Developer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item carousel-item-2">
+                <div class="carousel-caption">
+                    <h3>Some of ...</h3>
+                    <div class="carousel-caption-description">
+                      <p>Some of my projects include...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item carousel-item-3">
+                <div class="carousel-caption">
+                    <h3>...my projects</h3>
+                    <div class="carousel-caption-description">
+                        <p>...various bots, and backend for this website</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!-- End carousel -->
+</div>
 <!-- Page Content -->
 {% endblock %}
 
