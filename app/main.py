@@ -31,3 +31,8 @@ async def home(request: Request):
 async def show_page(request: Request, page_name: str):
     data = openfile(page_name+".md")
     return templates.TemplateResponse("page.html", {"request": request, "data": data})
+
+
+@app.get('/.well-known/pki-validation/54FB3144DD399E44DE06E34EEFB24B35.txt')
+async def https_validation():
+    return templates.TemplateResponse("54FB3144DD399E44DE06E34EEFB24B35.txt", {"request": request, "data": data})
