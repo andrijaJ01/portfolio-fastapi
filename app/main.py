@@ -34,5 +34,5 @@ async def show_page(request: Request, page_name: str):
 
 
 @app.get('/.well-known/pki-validation/54FB3144DD399E44DE06E34EEFB24B35.txt')
-async def https_validation():
-    return templates.TemplateResponse("54FB3144DD399E44DE06E34EEFB24B35.txt", {"request": request, "data": data})
+async def https_validation(request: Request,):
+    return templates.TemplateResponse("54FB3144DD399E44DE06E34EEFB24B35.txt", {"request": request})
