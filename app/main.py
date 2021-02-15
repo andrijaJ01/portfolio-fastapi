@@ -6,8 +6,12 @@ from fastapi.templating import Jinja2Templates
 from .library.helpers import *
 from app.routers import twoforms, unsplash, accordion , portfolio, root
 
+from fastapi_cache.types import CacheControl
+from fastapi_cache.middleware import CacheControlMiddleware
+
 
 app = FastAPI()
+app.add_middleware(CacheControlMiddleware, cache_control=CacheControl("public,max-age=31536000"))
 
 
 templates = Jinja2Templates(directory="templates")
@@ -34,5 +38,5 @@ async def show_page(request: Request, page_name: str):
 
 
 @app.get('/.well-known/pki-validation/54FB3144DD399E44DE06E34EEFB24B35.txt')
-async def https_validation(request: Request,):
+async def https_validation(request: Request):
     return templates.TemplateResponse("54FB3144DD399E44DE06E34EEFB24B35.txt", {"request": request})
