@@ -42,7 +42,7 @@
 
     {% block scripts %}
 
-    <script src="{{url_for('static',path='/js/jquery.js')}}></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <!-- Popper.JS -->
     <script async src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
         integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
@@ -54,9 +54,9 @@
     <!-- jQuery Custom Scroller CDN -->
     <script async src="https://kit.fontawesome.com/543c4560e5.js" crossorigin="anonymous"></script>
 
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="{{url_for('static',path='/js/sidebar.js')}}" charset="utf-8"></script>
-    <script src="{{url_for('static',path='/js/scroll.js')}}" charset="utf-8"></script>
-
     {% endblock %}
 </body>
 
