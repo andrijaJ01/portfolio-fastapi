@@ -11,8 +11,8 @@ templates = Jinja2Templates(directory="templates")
 router = APIRouter()
 
 
+
+
 @router.get("/gallery", response_class=HTMLResponse)
-async def unsplash_home(request: Request):
-    key = os.getenv("unsplash_key")
-    print(key)
+async def gallery(request: Request):
     return templates.TemplateResponse("unsplash.html", {"request": request})

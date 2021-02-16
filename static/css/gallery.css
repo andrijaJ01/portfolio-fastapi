@@ -1,0 +1,9 @@
+
+body {
+  background: #f4f4f4;
+}
+
+.banner {
+  background: rgb(8,90,91);
+  background: linear-gradient(128deg, rgba(8,90,91,1) 0%, rgba(139,98,11,1) 100%);
+}

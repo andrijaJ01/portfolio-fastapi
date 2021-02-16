@@ -10,12 +10,20 @@
 {% endblock %}
 
 {% block page_content %}
-
+<style>
+  .page-link{
+    color: black;
+  }
+  .page-link:hover{
+    color:gray;
+  }
+  
+</style>
     <div class="container">
 
       <!-- Page Heading -->
-      <h1 class="my-4">Page Heading<br>
-        <small>Secondary Text</small>
+      <h1 class="my-4">My Projects<br>
+
       </h1>
 
       <!-- Project One -->
@@ -26,8 +34,9 @@
           </a>
         </div>
         <div class="col-md-5">
-          <h3>Project One</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+          <h3>Search engine spider</h3>
+          <p>A Python library that queries Google, Bing, Yahoo and other search engines and collects the results from multiple search engine results pages.
+Please note that web-scraping may be against the Terms of Service of some search engines, and may result in a temporary ban.</p>
           <a class="btn btn-dark" href="#">View Project</a>
         </div>
       </div>
@@ -42,9 +51,9 @@
             <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
           </a>
         </div>
-        <div class="col-md-5">
-          <h3>Project Two</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
+        <div class="col-md-5 ">
+          <h3>Reddit APOD bot</h3>
+          <p>Simple bot that uses reddit's praw api to post picture aquired with NASA APOD api, comments with desription of that image and it's author.</p>
           <a class="btn btn-dark" href="#">View Project</a>
         </div>
       </div>
