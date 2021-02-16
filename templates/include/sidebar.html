@@ -9,7 +9,7 @@
     </div>
 
     <ul class="list-unstyled components">
-        <li class="active">
+        <li class="nav-item {{'active' if active_page == 'home' }}">
             <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
             <ul class="collapse list-unstyled" id="homeSubmenu">
                 <li>
@@ -35,8 +35,17 @@
            <!-- <a href="/page/portfolio">Portfolio</a> -->
            <a href="/portfolio">Portfolio</a>
         </li>
-        <li>
-            <a href="/page/contact">Contact</a>
+        <li class="nav-item {{'active' if active_page == 'gallery' }}">
+           <!-- <a href="/page/portfolio">Portfolio</a> -->
+           <a href="/gallery">Gallery</a>
         </li>
+
+        <li class="nav-item {{'active' if active_page == 'contact'}}">
+            <a href="/contact">Contact</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#0" id="goFS">Go fullscreen</a>
+        </li>
+
     </ul>
 </nav>

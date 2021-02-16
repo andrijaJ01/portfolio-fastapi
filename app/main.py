@@ -4,7 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 from .library.helpers import *
-from app.routers import twoforms, unsplash, accordion , portfolio, root
+from app.routers import twoforms, unsplash, accordion , portfolio, root, contact
 
 from fastapi_cache.types import CacheControl
 from fastapi_cache.middleware import CacheControlMiddleware
@@ -23,6 +23,8 @@ app.include_router(twoforms.router)
 app.include_router(accordion.router)
 app.include_router(portfolio.router)
 app.include_router(root.router)
+app.include_router(contact.router)
+
 
 
 @app.get("/", response_class=HTMLResponse)
