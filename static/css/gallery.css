@@ -4,6 +4,6 @@ body {
 }
 
 .banner {
-  background: rgb(8,90,91);
-  background: linear-gradient(128deg, rgba(8,90,91,1) 0%, rgba(139,98,11,1) 100%);
+  background: rgb(26,60,222);
+  background: linear-gradient(128deg, rgba(26,60,222,1) 0%, rgba(161,113,191,1) 47%, rgba(245,212,143,1) 100%);
 }
