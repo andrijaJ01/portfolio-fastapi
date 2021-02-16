@@ -10,7 +10,7 @@ from fastapi_cache.types import CacheControl
 from fastapi_cache.middleware import CacheControlMiddleware
 
 
-app = FastAPI()
+app = FastAPI(docs_url=None,redoc_url='/documentation')
 app.add_middleware(CacheControlMiddleware, cache_control=CacheControl("public,max-age=31536000"))
 
 
