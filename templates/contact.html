@@ -10,10 +10,40 @@
 {% endblock %}
 
 {% block page_content %}
+
+{% if success %}
+
+<div id="successmsg" style="position:absolute;z-index:999;" class="card shadow border-successs">
+    <div class="card-body">
+        <div class="no-gutters">
+            <div class="col mr-2">
+                <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>Success</span></div>
+                <hr class="success">
+                <div class="text-dark text-xxs font-weight-thin h5 mb-0"><span>Success, your message has been sent</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+  setTimeout(function(){
+  if ($('#successmsg').length > 0) {
+    $('#successmsg').fadeOut(100);
+  }
+}, 10000)
+
+
+
+
+</script>
+
+{% endif %}
+
+
 <div class="contact-clean" style="background-color: #f4f4f4;">
     <form action="/contact" method="post">
         <h2 class="text-center" style="filter: contrast(200%) saturate(0%);">Contact me</h2>
         <!-- Start: Success Example -->
+
         <div class="form-group"><input class="form-control" type="text" name="name" required="" placeholder="Name"></div>
         <!-- End: Success Example -->
         <!-- Start: Error Example -->
@@ -36,5 +66,4 @@
 {% block scripts %}
 {{ super() }}
 <script src="{{url_for('static',path='/js/forms.min.js')}}" charset="utf-8"></script>
-
 {% endblock %}

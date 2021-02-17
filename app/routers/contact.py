@@ -39,4 +39,5 @@ def form_get(request: Request):
 async def contact(request: Request,name: str = Form(...), email: str = Form(...), message:str = Form(...)):
     print(f'name:\t\t{name}\nemail:\t\t{email}\nmessage:\t\t{message}\n')
     send(name,email, message)
-    return templates.TemplateResponse('contact.html', context={'request': request,'name':name,'email':email,'message':message})
+    success=True
+    return templates.TemplateResponse('contact.html', context={'request': request,'name':name,'email':email,'message':message,'success':success})
