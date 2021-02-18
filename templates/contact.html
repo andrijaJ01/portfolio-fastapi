@@ -12,7 +12,7 @@
 {% block page_content %}
 
 {% if success %}
-
+{# if sending message is successful it returns popuo that disapears in 8 seconds #}
 <div id="successmsg" style="position:absolute;z-index:999;" class="card shadow border-successs">
     <div class="card-body">
         <div class="no-gutters">
@@ -29,12 +29,38 @@
   if ($('#successmsg').length > 0) {
     $('#successmsg').fadeOut(100);
   }
-}, 10000)
+}, 8000)
 
 
 
 
 </script>
+
+{% elif not success%}
+{# if sending message is successful it returns popuo that disapears in 8 seconds #}
+<div id="successmsg" style="position:absolute;z-index:999;" class="card shadow border-successs">
+    <div class="card-body">
+        <div class="no-gutters">
+            <div class="col mr-2">
+                <div class="text-uppercase text-danger font-weight-bold text-xs mb-1"><span>Warning</span></div>
+                <hr class="success">
+                <div class="text-dark text-xxs font-weight-thin h5 mb-0"><span>Your message has not been sent.<br>There was error in server try again later.</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+  setTimeout(function(){
+  if ($('#successmsg').length > 0) {
+    $('#successmsg').fadeOut(100);
+  }
+}, 8000)
+
+
+
+
+</script>
+
 
 {% endif %}
 

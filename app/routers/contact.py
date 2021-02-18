@@ -8,10 +8,11 @@ from email.mime.image import MIMEImage
 from email.mime.multipart import MIMEMultipart
 
 def send(name,mail,message):
+
     msg=MIMEMultipart()
     msg['Subject'] = f'{name} wants to say hi'
     msg['From'] = 'loggerk420@gmail.com'
-    message=f'{name}<{mail}>\n\n{message}'
+    message=f'{name}:\n<{mail}>\n\n{message}'
     text = MIMEText(str(message))
     msg.attach(text)
     s = smtplib.SMTP('smtp.gmail.com', '587')
@@ -20,6 +21,7 @@ def send(name,mail,message):
     s.ehlo()
     s.login('loggerk420@gmail.com','citwroufjzvyeqrk')
     s.sendmail('loggerk420@gmail.com', 'andrijajovanovic001@gmail.com', msg.as_string())
+
     s.quit()
 
 
@@ -38,6 +40,10 @@ def form_get(request: Request):
 @router.post('/contact')
 async def contact(request: Request,name: str = Form(...), email: str = Form(...), message:str = Form(...)):
     print(f'name:\t\t{name}\nemail:\t\t{email}\nmessage:\t\t{message}\n')
-    send(name,email, message)
-    success=True
+    try:
+        send(name,email, message)
+        success=True
+    except Exception as e:
+        success=False
+
     return templates.TemplateResponse('contact.html', context={'request': request,'name':name,'email':email,'message':message,'success':success})
