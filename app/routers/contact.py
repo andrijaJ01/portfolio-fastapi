@@ -37,13 +37,10 @@ templates = Jinja2Templates(directory="templates/")
 def form_get(request: Request):
     return templates.TemplateResponse('contact.html', context={'request': request})
 
-@router.post('/contact')
+@router.post('/contact/send')
 async def contact(request: Request,name: str = Form(...), email: str = Form(...), message:str = Form(...)):
     print(f'name:\t\t{name}\nemail:\t\t{email}\nmessage:\t\t{message}\n')
-    try:
-        send(name,email, message)
-        success=True
-    except Exception as e:
-        success=False
+    send(name,email, message)
+    success=True
 
     return templates.TemplateResponse('contact.html', context={'request': request,'name':name,'email':email,'message':message,'success':success})

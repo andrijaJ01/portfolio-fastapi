@@ -10,88 +10,74 @@
 {% endblock %}
 
 {% block page_content %}
-<h1 class="cap">Accordion</h1>
 
-{% if tag %}
-<h2>You selected {{tag}}</h2>
-{% endif %}
 
-{% set flora = ['flower','tree','fruit','garden'] %}
-{% set fauna = [ 'cat', 'dog', 'bird', 'fish'] %}
-
-<form method="post" id="category">
-    <div class="accordion" id="accordionExample">
-        <div class="card">
-            <div class="card-header" id="headingOne">
-                <h2 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
-                        aria-controls="collapseOne">
-                        FLORA
-                    </button>
-
-                </h2>
-            </div>
-
-            <div id="collapseOne" class="collapse 
-            {% for  name in flora %}
-            {% if name==tag %}
-            show 
-            {% endif %}
-            {% endfor %}
-            " aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                    {% for name in flora %}
-                    {% if tag == name %}
-                    {% set checked="checked" %}
-                    {% endif %}
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="tag" id="radio-{{name}}" value="{{name}}" {{
-                            checked }}>
-                        <label class="form-check-label" for="radio-{{name}}">
-                            {{ name | capitalize}}
-                        </label>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-header" id="headingTwo">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseTwo" aria-controls="collapseTwo">
-                        FAUNA
-                    </button>
-                </h2>
-            </div>
-            <div id="collapseTwo" class="collapse
-            {% for  name in fauna %}
-            {% if name==tag %}
-            show 
-            {% endif %}
-            {% endfor %}
-            " aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body">
-                    {% for name in fauna %}
-                    {% if tag == name %}
-                    {% set checked="checked" %}
-                    {% endif %}
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="tag" id="radio-{{name}}" value="{{name}}" {{
-                            checked }}>
-                        <label class="form-check-label" for="radio-{{name}}">
-                            {{ name | capitalize}}
-                        </label>
-                    </div>
-                    {% endfor %}
+    <div class="modal fade" role="dialog" tabindex="-1" id="signup">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Sign In</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend"><span class="text-primary input-group-text"><i style='color:#292b2c' class="fa fa-envelope-o"></i></span></div><input class="form-control" type="email" required="" placeholder="Email">
+                                <div class="input-group-append"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-append"></div>
+                                <div class="input-group-prepend"><span class="text-primary input-group-text"><i style='color:#292b2c' class="fa fa-lock"></i></span></div><input class="form-control" type="password" required="" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-group"><button class="btn btn-dark btn-lg text-white" style="width: 100%;" type="button">Log in</button></div>
+                    </form>
+                    <hr style="background-color: #bababa;">
+                    <p class="text-center text-xs">Or&nbsp;<a class="text-decoration-none" href="#">Forget password</a></p>
+                    <p class="text-center">Don't have an account? &nbsp;<a class="text-decoration-none" data-dismiss="modal" data-toggle="modal" data-target="#signin" href="#">Sign Up</a></p>
                 </div>
             </div>
         </div>
     </div>
-    <button type="submit" class="submit btn btn-dark btn-xl">Submit</button>
-</form>
-
+    <div class="modal fade" role="dialog" tabindex="-1" id="signin">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Sign Up Now</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <div class="text-center"><button class="btn btn-dark text-left" style="width: 100%;" type="button"><i class="fa fa-facebook"></i>&nbsp; Continue with Facebook</button></div>
+                    <div class="text-center mt-2"><button class="btn btn-light text-left border-dark" style="width: 100%;" type="button"><i class="fa fa-google"></i>&nbsp; Continue with Google</button></div>
+                    <form action='/register' method="post" class="mt-4">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend"><span class="text-primary input-group-text"><i style='color:#292b2c' class="fa fa-user-o"></i></span></div><input class="form-control" type="text" required="" placeholder="Full Name">
+                                <div class="input-group-append"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend"><span class="text-primary input-group-text"><i style='color:#292b2c' class="fa fa-envelope-o"></i></span></div><input class="form-control" type="email" required="" placeholder="Email">
+                                <div class="input-group-append"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend"><span class="text-primary input-group-text"><i style='color:#292b2c' class="fa fa-lock"></i></span></div><input class="form-control" type="password" required="" placeholder="Password">
+                                <div class="input-group-append"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1" required="True" checked=""><label class="form-check-label" for="formCheck-1">I agree all the terms and conditions.</label></div>
+                        </div>
+                        <div class="form-group"><button class="btn btn-dark btn-lg text-white" style="width: 100%;" type="button">Sign Up</button></div>
+                    </form>
+                    <hr style="background-color: #bababa;">
+                    <p class="text-center">Already have an Account?&nbsp;<a class="text-decoration-none" data-dismiss="modal" data-toggle="modal" data-target="#signup" href="#">Log In</a></p>
+                </div>
+            </div>
+        </div>
+        </div>
 {% endblock %}
 
 {% block scripts %}
