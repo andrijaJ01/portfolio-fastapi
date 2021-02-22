@@ -3,24 +3,23 @@
 {% block title %}Home{% endblock %}
 {% block head %}
 {{super()}}
+<link href="{{ url_for('static', path='/css/bootstrap.min.home.css') }}" rel="stylesheet">
 
 
 {% endblock %}
 
 {% block page_content %}
-<link href="{{ url_for('static', path='/css/bootstrap.min.home.css') }}" rel="stylesheet">
-
+{% include 'include/sidebar.html' %}
 <style media="screen">
   hr.star-light{max-width:15rem;padding:0;text-align:center;border:none;border-top:.25rem solid;margin-top:2.5rem;margin-bottom:2.5rem}
   hr.star-light:after{background-color:#2c3e50!important;position:relative;top:-.8em;display:inline-block;padding:0 .25em;content:"\f1c9";font-family:FontAwesome;font-size:2em}
 </style>
-<header style="padding-top:15px;margin-bottom:-10px;height:calc(100vh - 68px)" class="masthead bg-secondary text-white text-center mobile-100">
+<header style="padding-top:30px;height:calc(100vh - 56px)" class="masthead bg-secondary text-white text-center">
     <div class="container"><img class="img-fluid d-block mx-auto mb-5" src="{{url_for('static',path='/images/profile.png')}}">
-        <h1 class=>Andrija Jovanovic</h1>
+        <h1>About</h1>
         <hr class="star-light ">
         <h2 class="font-weight-light mb-0">Fullstack developer - Web Designer - Digital Artist</h2>
     </div>
-    <a href="/about"><button type="button" class="btn btn-dark btn-lg  my-2 border-white" name="button">About me </button></a>
 </header>
 
 
