@@ -12,14 +12,34 @@
 {% include 'include/sidebar.html' %}
 <style media="screen">
   hr.star-light{max-width:15rem;padding:0;text-align:center;border:none;border-top:.25rem solid;margin-top:2.5rem;margin-bottom:2.5rem}
-  hr.star-light:after{background-color:#2c3e50!important;position:relative;top:-.8em;display:inline-block;padding:0 .25em;content:"\f1c9";font-family:FontAwesome;font-size:2em}
+  hr.star-light:after{background-color:#2c3e50!important;position:relative;top:-.8em;display:inline-block;padding:0 .25em;content:"\f128";font-family:FontAwesome;font-size:2em}
+  hr.calendar{max-width:15rem;padding:0;text-align:center;border:none;border-top:.25rem solid;margin-top:2.5rem;margin-bottom:2.5rem}
+  hr.calendar:after{background-color:#2c3e50!important;position:relative;top:-.8em;display:inline-block;padding:0 .25em;content:"\f133";font-family:FontAwesome;font-size:2em}
+
 </style>
-<header style="padding-top:30px;height:calc(100vh - 56px)" class="masthead bg-secondary text-white text-center">
-    <div class="container"><img class="img-fluid d-block mx-auto mb-5" src="{{url_for('static',path='/images/profile.png')}}">
-        <h1>About</h1>
+<header style="padding-top:30px;height:calc(100vh - 68px)" class="masthead bg-secondary text-white text-center">
+    <div class="container">
+        <h1>Who am I?</h1>
         <hr class="star-light ">
-        <h2 class="font-weight-light mb-0">Fullstack developer - Web Designer - Digital Artist</h2>
+        <p class=" text-white font-weight-light mb-0">
+                  I am self taught, highly motivated, python
+                  developer from Serbia and I've been coding for a
+                  year. I usualy work on building web scrapers,
+                  automation tools , FastApi or Flask
+                  web apps and all kinds of automation, be it
+                  sending emails or working with excel
+                  files. I mainly work with
+                  python and I know some HTML,CSS and
+                  Javascript. I am comfrtable with working on
+                  both windows and linux.I also have some
+                  knowledge of working in GIMP and Inkscape.
+
+                </p>
     </div>
+    <hr class="calendar ">
+    <a href="/contact"><button type="button" class="btn btn-dark btn-lg  my-2 border-white" name="button">Contact me </button></a>
+
+
 </header>
 
 

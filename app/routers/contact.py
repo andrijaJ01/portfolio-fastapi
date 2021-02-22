@@ -39,7 +39,9 @@ def form_get(request: Request):
 
 @router.post('/contact/send')
 async def contact(request: Request,name: str = Form(...), email: str = Form(...), message:str = Form(...)):
+    print('#BEGGIN EMAIL')
     print(f'name:\t\t{name}\nemail:\t\t{email}\nmessage:\t\t{message}\n')
+    print('#END EMAIL')
     send(name,email, message)
     success=True
 

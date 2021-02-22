@@ -6,44 +6,16 @@
 {% block head %}
 {{ super() }}
 <link rel="stylesheet" href="{{url_for('static',path='css/contact.css')}}">
+<link href="{{ url_for('static', path='/css/bootstrap.min.home.css') }}" rel="stylesheet">
+
 
 {% endblock %}
 
 {% block page_content %}
-
-<!--
 {% if success %}
-{# if sending message is successful it returns popuo that disapears in 8 seconds #}
-<div id="successmsg" style="position:absolute;z-index:999;" class="card shadow border-successs">
-    <div class="card-body">
-        <div class="no-gutters">
-            <div class="col mr-2">
-                <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>Success</span></div>
-                <hr class="success">
-                <div class="text-dark text-xxs font-weight-thin h5 mb-0"><span>Success, your message has been sent</span></div>
-            </div>
-        </div>
-    </div>
-</div>
-<script type="text/javascript">
-  setTimeout(function(){
-  if ($('#successmsg').length > 0) {
-    $('#successmsg').fadeOut(100);
-  }
-}, 8000)
-
-
-
-
-</script>
-
-
-{% endif %}
--->
-{% if success %}
-	<div id="successmsg " class="alert alert-success alert-dismissible fade show" style='margin:0' role="alert">
+	<div id="successmsg " class="alert alert-success alert-dismissible fade show m-0 py-2" style='' role="alert">
 		<strong>IT'S ALIVE!</strong> You dont have to worry now, I'll get in touch with you as soon as possible.
-			<button type="button" class="close " data-dismiss="alert" aria-label="Close">
+			<button type="button" class="close m-0 p-0" data-dismiss="alert" aria-label="Close">
 			<span aria-hidden="true">&times;</span>
 		</button>
 </div>
@@ -62,7 +34,7 @@
 
 {% endif %}
 
-<div class="contact-clean" style="background-color: #f4f4f4;">
+<div class="contact-clean" style="background-color: #646464;">
     <form action="/contact/send" method="post">
         <h2 class="text-center" style="filter: contrast(200%) saturate(0%);">Contact me</h2>
         <!-- Start: Success Example -->
@@ -76,7 +48,8 @@
         </div>
         <!-- End: Error Example -->
         <div class="form-group"><textarea class="form-control" rows="14" name="message" placeholder="Message"></textarea></div>
-        <div class="form-group"><button class="btn btn-primary" type="submit" style="filter: brightness(72%) contrast(200%) saturate(0%);">send </button></div>
+        <div class="form-group">
+					<button style='color:#fff;background-color:#343a40;border-color:#343a40;border:solid 2px #343a40' class="btn btn-dark btn-lg btn-block border-white" type="submit" >send </button></div>
     </form>
 </div>
 <!-- End: Contact Form Clean -->
