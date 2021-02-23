@@ -30,28 +30,6 @@
 
 {% block scripts %}
 
-<script>
-  var goFS = document.getElementByClass("fs");
-  goFS.addEventListener("click", function() {
-      document.body.requestFullscreen();
-  }, false);
-
-  function toggleFullScreen() {
-  var doc = window.document;
-  var docEl = doc.documentElement;
-
-  var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
-  var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
-
-  if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
-    requestFullScreen.call(docEl);
-  }
-  else {
-    cancelFullScreen.call(doc);
-  }
-}
-
-</script>
 <script src="{{url_for('static',path='/js/freelancer.js')}}" charset="utf-8"></script>
 
 {{ super() }}
