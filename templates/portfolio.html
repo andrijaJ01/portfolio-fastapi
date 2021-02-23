@@ -19,9 +19,16 @@
     @media (min-width:350px){
       .img-fluid{width:95%}
       .container{
-        width:1p0%
+        width:100%
       }
     }
+    #content{
+      background-color:#6c757d!important;
+      color:white;
+    }
+    #content p{color:white}
+    .desc{
+      display:flex;flex-direction:column;justify-content:space-evenly}
 </style>
     <div class="container">
 
@@ -37,11 +44,11 @@
             <img class=" img-fluid rounded mb-3 mb-md-0" src="{{url_for('static',path='/images/portfolio_1.webp')}}" alt="">
           </a>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5 desc">
           <h3>Search engine spider</h3>
           <p>A Python library that queries Google, Bing, Yahoo and other search engines and collects the results from multiple search engine results pages.
 Please note that web-scraping may be against the Terms of Service of some search engines, and may result in a temporary ban.</p>
-          <a class="btn btn-dark" href="portfolio/1">View Project</a>
+          <a class="btn btn-dark btn-lg btn-block my-2 border-white" href="portfolio/1">View Project</a>
         </div>
       </div>
       <!-- /.row -->
@@ -55,10 +62,10 @@ Please note that web-scraping may be against the Terms of Service of some search
             <img class=" img-fluid rounded mb-3 mb-md-0" src="{{url_for('static',path='/images/portfolio_2.webp')}}" alt="">
           </a>
         </div>
-        <div class="col-md-5 ">
+        <div class="col-md-5 desc">
           <h3>Reddit APOD bot</h3>
           <p>Simple bot that uses reddit's praw api to post picture aquired with NASA APOD api, comments with desription of that image and it's author.</p>
-          <a class="btn btn-dark" href="/portfolio/2">View Project</a>
+          <a class="btn btn-dark btn-lg btn-block my-2 border-white" href="/portfolio/2">View Project</a>
         </div>
       </div>
       <!-- /.row -->
@@ -72,11 +79,11 @@ Please note that web-scraping may be against the Terms of Service of some search
             <img class="img-fluid rounded mb-3 mb-md-0" src="{{url_for('static',path='/images/portfolio_3.webp')}}" alt="">
           </a>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5 desc">
           <h3>This website</h3>
           <p>A static simple website ready to deploy. This repo includes all the files and it is ready to deploy to Heroku<br>.env,.gitignore,app,Procfile,README.md,<br>requirements.txt,runtime.txt,static,<br>templates.
 </p>
-          <a class="btn btn-dark" href="/portfolio/3">View Project</a>
+          <a class="btn btn-dark btn-lg btn-block my-2 border-white" href="/portfolio/3">View Project</a>
         </div>
       </div>
       <!-- /.row -->

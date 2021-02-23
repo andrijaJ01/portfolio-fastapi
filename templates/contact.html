@@ -6,16 +6,15 @@
 {% block head %}
 {{ super() }}
 <link rel="stylesheet" href="{{url_for('static',path='css/contact.css')}}">
-<link href="{{ url_for('static', path='/css/bootstrap.min.home.css') }}" rel="stylesheet">
 
 
 {% endblock %}
 
 {% block page_content %}
 {% if success %}
-	<div id="successmsg " class="alert alert-success alert-dismissible fade show m-0 py-2" style='' role="alert">
+	<div id="successmsg " class="alert alert-success alert-dismissible fade show my-0 py-1" style='' role="alert">
 		<strong>IT'S ALIVE!</strong> You dont have to worry now, I'll get in touch with you as soon as possible.
-			<button type="button" class="close m-0 p-0" data-dismiss="alert" aria-label="Close">
+			<button type="button" class="close m-0 p-0 py-1" data-dismiss="alert" aria-label="Close">
 			<span aria-hidden="true">&times;</span>
 		</button>
 </div>
@@ -34,9 +33,9 @@
 
 {% endif %}
 
-<div class="contact-clean" style="background-color: #646464;">
+<div class="contact-clean">
     <form action="/contact/send" method="post">
-        <h2 class="text-center" style="filter: contrast(200%) saturate(0%);">Contact me</h2>
+        <h2 class="envelope text-center" style="filter: contrast(200%) saturate(0%);">Contact me</h2>
         <!-- Start: Success Example -->
 
         <div class="form-group"><input class="form-control" type="text" name="name" required="" placeholder="Name"></div>
@@ -46,10 +45,9 @@
 
 
         </div>
-        <!-- End: Error Example -->
         <div class="form-group"><textarea class="form-control" rows="14" name="message" placeholder="Message"></textarea></div>
         <div class="form-group">
-					<button style='color:#fff;background-color:#343a40;border-color:#343a40;border:solid 2px #343a40' class="btn btn-dark btn-lg btn-block border-white" type="submit" >send </button></div>
+					<button style="background:#343a40;border:solid 2px #fff" class="btn btn-dark btn-lg btn-block border-white" type="submit" > <i class="fa fa-envelope mx-2"></i>send  </button></div>
     </form>
 </div>
 <!-- End: Contact Form Clean -->

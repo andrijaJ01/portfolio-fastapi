@@ -10,9 +10,18 @@
 {% endblock %}
 
 {% block page_content %}
-
+<style media="screen">
+  #content{
+    background-color:#6c757d!important;
+    color:white;
+  }
+  #content p{color:white}
+  .desc{justify-content:space-evenly}
+</style>
 <!-- Page Content -->
+
 <div class="container">
+  <a href="/portfolio"><button type="button" class="btn btn-dark btn-lg  my-2 border-white" name="button">Go back </button></a>
 
   <!-- Portfolio Item Heading -->
   <h1 class="my-4">{{title}}
@@ -40,7 +49,7 @@
   <!-- /.row -->
 
   <!-- Related Projects Row -->
-  
+
 
 </div>
 <!-- /.container -->
