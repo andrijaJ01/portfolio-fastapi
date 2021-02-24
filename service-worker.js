@@ -7,7 +7,8 @@ if (workbox) {
 
   workbox.precaching.precacheAndRoute([
     {
-      "url": "/",
+      "url": "portfolio-fastapi.herokuapp.com ",
+
       "revision": "1"
     }
   ]);
