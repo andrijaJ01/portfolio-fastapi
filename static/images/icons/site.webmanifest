@@ -1,7 +1,7 @@
 {
     "name": "portfolio by andrija",
     "short_name": "portfolio",
-    "start_url": "portfolio-fastapi.herokuapp.com",
+    "start_url": "portfolio-fastapi.herokuapp.com ",
 
     "icons": [
         {
