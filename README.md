@@ -23,7 +23,7 @@ See requirements.txt.
 
 ```bash
 $ git clone github.com/andrijaj01/portfolio-fastapi.git
-# Or using downloaded zip file 
+# Or using downloaded zip file
 $ unzip portfolio-website.zip
 
 # change the directory
@@ -36,7 +36,7 @@ $ uvicorn app.main:app --reload --port 8080 --host 0.0.0.0
 
 Visit [http://0.0.0.0:8080/](http://0.0.0.0:8080/).
 
-![Starting](./images/image-3.png)
+![Starting](./images/image-4.webp)
 
 ## Features
 
