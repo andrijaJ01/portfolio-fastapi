@@ -1,0 +1,27 @@
+{
+    "name": "portfolio by andrija",
+    "short_name": "portfolio",
+    "start_url": "https://portfolio-fastapi.herokuapp.com/",
+
+    "icons": [
+        {
+            "src": "/static/images/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/images/icons/android-chrome-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/images/icons/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png",
+            "purpose":"any maskable"
+        }
+    ],
+    "theme_color": "#6c757d",
+    "background_color": "#6c757d",
+    "display": "standalone"
+}
