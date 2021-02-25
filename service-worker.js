@@ -14,14 +14,14 @@ if (workbox) {
   ]);
 
   workbox.routing.registerRoute(
-    /static/\.(?:js|css)$/,
+    /\.(?:js|css)$/,
     workbox.strategies.staleWhileRevalidate({
       cacheName: 'static-resources',
     }),
   );
 
   workbox.routing.registerRoute(
-    /static/\.(?:png|gif|jpg|jpeg|svg)$/,
+    /\.(?:png|gif|jpg|jpeg|svg)$/,
     workbox.strategies.cacheFirst({
       cacheName: 'images',
       plugins: [
