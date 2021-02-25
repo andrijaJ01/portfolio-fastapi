@@ -7,21 +7,21 @@ if (workbox) {
 
   workbox.precaching.precacheAndRoute([
     {
-      "url": "portfolio-fastapi.herokuapp.com ",
+      "url": "https://portfolio-fastapi.herokuapp.com/",
 
       "revision": "1"
     }
   ]);
 
   workbox.routing.registerRoute(
-    /\.(?:js|css)$/,
+    /static/\.(?:js|css)$/,
     workbox.strategies.staleWhileRevalidate({
       cacheName: 'static-resources',
     }),
   );
 
   workbox.routing.registerRoute(
-    /\.(?:png|gif|jpg|jpeg|svg)$/,
+    /static/\.(?:png|gif|jpg|jpeg|svg)$/,
     workbox.strategies.cacheFirst({
       cacheName: 'images',
       plugins: [
