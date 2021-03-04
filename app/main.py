@@ -8,13 +8,13 @@ from app.routers import twoforms, unsplash , portfolio, root, contact,about,test
 
 from fastapi_cache.types import CacheControl
 from fastapi_cache.middleware import CacheControlMiddleware
-from fastapi.middleware.httpsredirect import HTTPSRedirectMiddleware
+#from fastapi.middleware.httpsredirect import HTTPSRedirectMiddleware
 
 
 
 app = FastAPI(redoc_url='/documentation')
 app.add_middleware(CacheControlMiddleware, cache_control=CacheControl("public,max-age=31536000"))
-app.add_middleware(HTTPSRedirectMiddleware)
+#app.add_middleware(HTTPSRedirectMiddleware)
 
 
 templates = Jinja2Templates(directory="templates")
