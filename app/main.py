@@ -4,7 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 from .library.helpers import *
-from app.routers import twoforms, unsplash , portfolio, root, contact,about,test
+from app.routers import twoforms, unsplash , portfolio, root, contact,about
 
 from fastapi_cache.types import CacheControl
 from fastapi_cache.middleware import CacheControlMiddleware
@@ -12,7 +12,7 @@ from fastapi_cache.middleware import CacheControlMiddleware
 
 
 
-app = FastAPI(redoc_url='/documentation')
+app = FastAPI(docs_url=None,redoc_url='/documentation')
 app.add_middleware(CacheControlMiddleware, cache_control=CacheControl("public,max-age=31536000"))
 #app.add_middleware(HTTPSRedirectMiddleware)
 
@@ -27,4 +27,3 @@ app.include_router(portfolio.router)
 app.include_router(root.router)
 app.include_router(contact.router)
 app.include_router(about.router)
-app.include_router(test.router)
